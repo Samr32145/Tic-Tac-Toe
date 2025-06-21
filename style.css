@@ -1,0 +1,103 @@
+body {
+  font-family: url("Magilio.otf");
+  text-align: center;
+  color: rgba(22, 22, 158, 0.901);
+  background-image: url("Images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  width: 360px;
+  height: 100px;
+  background-image: url("Images/H1\ background.png");
+  background-size: 360px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgba(22, 22, 158, 0.901);
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+  box-shadow: 0 8px 8px 0 rgba(28, 31, 81, 0.2),
+    0 6px 15px 0 rgba(17, 48, 109, 0.145);
+}
+
+#game-board {
+  width: 310px;
+  height: 310px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-image: url("images/grid.png");
+  background-size: cover;
+  position: center;
+  padding: 1px;
+  box-shadow: 0 8px 8px 0 rgba(28, 31, 81, 0.2),
+    0 6px 15px 0 rgba(17, 48, 109, 0.145);
+}
+
+#board-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 310px;
+  height: 310px;
+  position: relative; /* critical for line placement */
+}
+
+.cell {
+  width: 90px;
+  height: 90px;
+  background-image: url("images/box-bg.png");
+  background-size: cover;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6.5px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.cell img {
+  width: 80px;
+  height: 80px;
+  margin: 5px 5px;
+}
+
+#winning-line {
+  position: absolute;
+  height: 4px;
+  background-color: rgb(14, 6, 86);
+  width: 300px;
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.4s ease, top 0.4s ease, left 0.4s ease,
+    rotate 0.4s ease;
+  z-index: 10;
+}
+
+#status {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: rgba(22, 22, 158, 0.901);
+}
+
+button {
+  font-weight: bold;
+  border: 0px;
+  color: rgba(22, 22, 158, 0.901);
+  background-image: url("Images/reset\ button.png");
+  background-size: cover;
+  width: 180px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 8px 0 rgba(28, 31, 81, 0.2),
+    0 6px 15px 0 rgba(17, 48, 109, 0.145);
+}
